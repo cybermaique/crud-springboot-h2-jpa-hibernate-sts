@@ -3,9 +3,18 @@ package com.projectcrud.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity //annotation do jpa pra converter os objetos pro modelo relacional
 public class User implements Serializable{ //serializable: objeto pode ser transformado em cadeia de bytes, para trafegar na rede, ser gravado em arquivos, etc.
 
 	 private static final long serialVersionUID = 1L;
+	 
+	 @Id
+	 @GeneratedValue(strategy = GenerationType.IDENTITY)
 	 private Long id;
 	 private String name;
 	 private String email;

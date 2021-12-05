@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.projectcrud.entities.User;
 
 @RestController //para definir como aplicação web q é implementado por  rest controller.
-@RequestMapping(value = "/users")
+@RequestMapping(value = "/users") //para definir o caminho do endpoint
 public class UserResource {
 	
 	@GetMapping //pra indicar q o método vai responder requisição do tipo get do http
